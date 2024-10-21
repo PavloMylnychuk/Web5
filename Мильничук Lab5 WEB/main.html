@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Маркетингове дослідження</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST">
+        <h2>Маркетингове дослідження</h2>
+
+        <!-- Прізвище -->
+        <label for="last-name">Прізвище: *</label>
+        <input type="text" id="last-name" name="last-name" required>
+
+        <!-- Ім'я -->
+        <label for="first-name">Ім'я:</label>
+        <input type="text" id="first-name" name="first-name">
+
+        <!-- Джерела інформації -->
+        <label for="sources">З яких джерел Ви отримали інформацію про інтернет-магазин? *</label>
+        <textarea id="sources" name="sources" rows="4" required></textarea>
+
+        <!-- Кількість відомих магазинів -->
+        <label for="stores">Зазначте кількість інтернет-магазинів, відомих Вам: *</label>
+        <select id="stores" name="stores" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <!-- Оцінка магазину за характеристиками -->
+        <label>Оцініть роботу магазину за запропонованими характеристиками: *</label>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <th>Характеристика</th>
+                <th>Погано</th>
+                <th>Задовільно</th>
+                <th>Добре</th>
+                <th>Відмінно</th>
+            </tr>
+            <tr>
+                <td>Асортимент</td>
+                <td><input type="radio" name="assortment" value="Погано" required></td>
+                <td><input type="radio" name="assortment" value="Задовільно"></td>
+                <td><input type="radio" name="assortment" value="Добре"></td>
+                <td><input type="radio" name="assortment" value="Відмінно"></td>
+            </tr>
+            <tr>
+                <td>Повна інформація про товар</td>
+                <td><input type="radio" name="information" value="Погано" required></td>
+                <td><input type="radio" name="information" value="Задовільно"></td>
+                <td><input type="radio" name="information" value="Добре"></td>
+                <td><input type="radio" name="information" value="Відмінно"></td>
+            </tr>
+            <tr>
+                <td>Зручність формування замовлення</td>
+                <td><input type="radio" name="order" value="Погано" required></td>
+                <td><input type="radio" name="order" value="Задовільно"></td>
+                <td><input type="radio" name="order" value="Добре"></td>
+                <td><input type="radio" name="order" value="Відмінно"></td>
+            </tr>
+            <tr>
+                <td>Кількість варіантів оплати</td>
+                <td><input type="radio" name="payment-options" value="Погано" required></td>
+                <td><input type="radio" name="payment-options" value="Задовільно"></td>
+                <td><input type="radio" name="payment-options" value="Добре"></td>
+                <td><input type="radio" name="payment-options" value="Відмінно"></td>
+            </tr>
+        </table>
+
+        <!-- Важливі фактори -->
+        <label>Що на Вашу думку найбільш важливе для ефективного функціонування інтернет-магазину? *</label>
+        <input type="radio" name="important-factor" value="Асортимент" required> Наявний асортимент <br>
+        <input type="radio" name="important-factor" value="Дизайн і зручність"> Дизайн і зручність користування інтернет-магазином <br>
+        <input type="radio" name="important-factor" value="Сервіс"> Наявність сервісного обслуговування <br>
+        <input type="radio" name="important-factor" value="Інше"> Інше <br>
+
+        <!-- Групи товарів -->
+        <label>Виділіть групи товарів, які викликали у Вас найбільше зацікавлення: *</label><br>
+        <input type="checkbox" name="category" value="Побутова техніка"> Побутова техніка <br>
+        <input type="checkbox" name="category" value="Меблі"> Меблі <br>
+        <input type="checkbox" name="category" value="Побутова хімія"> Побутова хімія <br>
+        <input type="checkbox" name="category" value="Комп'ютерна техніка"> Комп'ютерна техніка <br>
+        <input type="text" name="other-category" placeholder="Інше">
+
+        <!-- Загальна оцінка магазину -->
+        <label>Дайте загальну оцінку інтернет-магазину за п'ятибальною шкалою: *</label><br>
+        <input type="radio" name="rating" value="1" required> 1 <br>
+        <input type="radio" name="rating" value="2"> 2 <br>
+        <input type="radio" name="rating" value="3"> 3 <br>
+        <input type="radio" name="rating" value="4"> 4 <br>
+        <input type="radio" name="rating" value="5"> 5 <br>
+
+        <!-- Пропозиції покращення -->
+        <label for="improvements">Що на Вашу думку необхідно змінити/покращити в роботі нашого інтернет-магазину?</label>
+        <textarea id="improvements" name="improvements" rows="4"></textarea>
+
+        <!-- Кнопка відправки -->
+        <input type="submit" class="submit-btn" value="Надіслати">
+    </form>
+
+</body>
+</html>
